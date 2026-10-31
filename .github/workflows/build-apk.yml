@@ -23,14 +23,14 @@ jobs:
       - name: Check project ZIP
         run: |
           ls -la
-          test -f TurboDriveAndroid_Project_ready.zip
+          test -f TurboDriveAndroid_Project_ready-1.zip
 
       - name: Extract project
         run: |
           sudo apt-get update
           sudo apt-get install -y unzip
           mkdir -p source
-          unzip -o TurboDriveAndroid_Project_ready.zip -d source
+          unzip -o TurboDriveAndroid_Project_ready-1.zip -d source
           find source -maxdepth 4 -type f | head -80
           test -f source/TurboDriveAndroid/app/build.gradle
 
